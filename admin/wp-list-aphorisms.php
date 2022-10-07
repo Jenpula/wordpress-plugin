@@ -5,10 +5,10 @@
     global $wpdb;
 
     //Table name for SQL statement
-    $table_name = "classic-aphorism";
+    $table_name = "classic_aphorism";
 
     //Run SQL statement for querying the number of aphorism in database
-    $aphorism_count = $wpdb->get_var("SELECT COUNT(id) FROM" . $table_name):
+    $aphorism_count = $wpdb->get_var("SELECT COUNT(id) FROM " . $table_name);
     echo "<h2>Aphorisms (" . $aphorism_count . ")</h2>";
     if ($aphorism_count > 0) {
 
@@ -20,7 +20,7 @@
 
         //If there are aphorims, iterate those and output to screen
         if ($aphorisms) {
-            foreach ($aphprisms as $aphorism) {
+            foreach ($aphoprisms as $aphorism) {
                 echo "<p>" . $aphorism-> aphorism . "</p>";
             }
         }

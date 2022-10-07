@@ -51,11 +51,11 @@
     }
 
     //Hook function to action
-    add_action("plugins_loaded" , "wp_classic_aphorims_init");
+    add_action("plugins_loaded" , "wp_classic_aphorism_init");
 
     //Function creates new istance (object) from the class
-    function wp_classic_aphorims_init() {
-        $wp_classic_aphprism = new Wp_classic_aphorism_class();
+    function wp_classic_aphorism_init() {
+        $wp_classic_aphorism = new Wp_classic_aphorism_class();
     }
 
 ?>

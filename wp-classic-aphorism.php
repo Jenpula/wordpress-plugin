@@ -18,7 +18,7 @@ define('PLUGIN_NAME' , 'wp-classic-aphorism');
 include_once('wp-classic-aphorism-database.php');
 
 //Include main class of the plugin
-include_once("wp-classic-aphorism-class.php")
+include_once("wp-classic-aphorism-class.php");
 
 //Add hooks for activation and deactivation
 register_activation_hook(__FILE__,array('Wp_classic_aphorism_database' , 'activate'));
