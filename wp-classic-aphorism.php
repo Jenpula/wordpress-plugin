@@ -10,11 +10,15 @@ License: GPL2
 ?>
 
 <?php
+
 //Plugin name is the unique name of the plugin
 define('PLUGIN_NAME' , 'wp-classic-aphorism');
 
 // include PHP file including functions of database table creation and drop
 include_once('wp-classic-aphorism-database.php');
+
+//Include main class of the plugin
+include_once("wp-classic-aphorism-class.php")
 
 //Add hooks for activation and deactivation
 register_activation_hook(__FILE__,array('Wp_classic_aphorism_database' , 'activate'));
