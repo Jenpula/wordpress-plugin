@@ -19,9 +19,7 @@ if(isset($_POST["aphorism"])) {
     echo("<p>Aphorism saved.</p>");
 }
 ?>
-
 <!-- Form -->
-
 <h2>Add aphorism</h2>
 <form method="post" action="">
     <p></p>

@@ -7,7 +7,7 @@ class Wp_classic_aphorism_database {
         $table_name = 'classic-aphorism';
 
         //SQL statement for table creation having two columns
-        $sql = 'CREATE TABLE IF NOT EXISTS classic_aphorism (
+        $sql = 'CREATE TABLE IF NOT EXISTS $table_name (
             id int PRIMARY KEY AUTO_INCREMENT,
             aphorism text);';
     
