@@ -1,4 +1,9 @@
 <?php
+
+
+//Enqueue stylesheet
+wp_enqueue_style('wpstyle');
+
 //Global database object for interacting with the database
 global $wpdb;
 
@@ -6,7 +11,10 @@ global $wpdb;
 $aphorism = "";
 
 //Table name for SQL statement
-$table_name = "classic-aphorism";
+$table_name = "classic_aphorism";
+
+
+echo("<div class='wrap'>");
 
 //check if target information has updated to database
 
@@ -17,7 +25,9 @@ if(isset($_POST["aphorism"])) {
     $wpdb->insert (
         $table_name, array("aphorism" => $aphorism)
     );
+    echo("<div class='updated'>");
     echo("<p>Aphorism saved.</p>");
+    echo("</div>");
 }
 ?>
 <!-- Form -->
@@ -28,3 +38,4 @@ if(isset($_POST["aphorism"])) {
     <p></p>
     <input type="submit" class="button button-primary" value="Save">
 </form>
+</div>

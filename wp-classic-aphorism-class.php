@@ -4,12 +4,18 @@ class Wp_classic_aphorism_class {
 
     //Initialization
     public function __construct() {
+
+        add_action('init', array($this, 'init'));
+
         // Hook function to action
         add_action('admin_menu', array($this, 'setup_admin_menu'));
 
         //Add shortcode and set callback function that will be called every time
 
         add_shortcode("classic_aphorism", array($this, "classic_aphorism_shortcode"));
+    
+        //Add hook to function that registers widget 
+        add_action('widgets_init', array($this, 'register_widget'));
     }
 
     // Function creates the menu
@@ -69,6 +75,16 @@ class Wp_classic_aphorism_class {
         if($row != null) {
             return "<h4><i>" . "\"" . $row->aphorism . "\"" . "</i></h4>";
         }
+    }
+
+    // Function registers widget
+    public function register_widget() {
+        register_widget('Wp_classic_aphorism_widget');
+    }
+
+    public function init() {
+        //registering stylesheet
+        wp_register_style('wpstyle', plugins_url('css/style.css', __FILE__));
     }
 }
 

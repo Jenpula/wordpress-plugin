@@ -4,12 +4,12 @@ class Wp_classic_aphorism_database {
     //Function is called when plugin is activated
     public static function activate() {
         //table name for SQL statement
-        $table_name = 'classic-aphorism';
+        $table_name = 'classic_aphorism';
 
         //SQL statement for table creation having two columns
-        $sql = 'CREATE TABLE IF NOT EXISTS $table_name (
+        $sql = "CREATE TABLE IF NOT EXISTS $table_name (
             id int PRIMARY KEY AUTO_INCREMENT,
-            aphorism text);';
+            aphorism text);";
     
         //Include uprage functions
         require_once(ABSPATH . "wp-admin/includes/upgrade.php");
@@ -24,7 +24,7 @@ class Wp_classic_aphorism_database {
         public static function deactivate() {
             global $wpdb;
 
-            $table_name = "classic_aphorism";
+            $table_name = "classic-aphorism";
 
             $sql = "DROP TABLE IF EXISTS $table_name;";
 
