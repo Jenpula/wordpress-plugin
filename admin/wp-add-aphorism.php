@@ -11,6 +11,7 @@ $table_name = "classic-aphorism";
 //check if target information has updated to database
 
 if(isset($_POST["aphorism"])) {
+
     $aphorism = sanitize_text_field($_POST["aphorism"]);
  
     $wpdb->insert (
@@ -25,5 +26,5 @@ if(isset($_POST["aphorism"])) {
     <p></p>
     <textarea id ="aphorism" name="aphorism"></textarea>
     <p></p>
-    <input type="submit" class="button button primary" value="Save">
+    <input type="submit" class="button button-primary" value="Save">
 </form>

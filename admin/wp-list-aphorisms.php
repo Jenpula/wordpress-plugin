@@ -20,8 +20,8 @@
 
         //If there are aphorims, iterate those and output to screen
         if ($aphorisms) {
-            foreach ($aphoprisms as $aphorism) {
-                echo "<p>" . $aphorism-> aphorism . "</p>";
+            foreach ($aphorisms as $aphorism) {
+                echo "<p>" . $aphorism->aphorism . "</p>";
             }
         }
     }
