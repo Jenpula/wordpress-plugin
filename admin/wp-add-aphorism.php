@@ -31,6 +31,8 @@ if(isset($_POST["aphorism"])) {
 }
 ?>
 <!-- Form -->
+<h4>This plugin let's you insert different aphorisms, and randomly choosing one of them in page if you use widget or shortcode of this plugin.</h4>
+<p>Shortcode for using this plugin is [classic-aphorism]. You can use the shortcode by going to page you want to insert it, and select shortcode from add block. Then insert [classic-aphorism] and update the page.</p>
 <h2>Add aphorism</h2>
 <form method="post" action="">
     <p></p>

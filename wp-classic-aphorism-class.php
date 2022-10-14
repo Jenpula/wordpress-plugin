@@ -12,7 +12,7 @@ class Wp_classic_aphorism_class {
 
         //Add shortcode and set callback function that will be called every time
 
-        add_shortcode("classic_aphorism", array($this, "classic_aphorism_shortcode"));
+        add_shortcode('classic-aphorism', array($this, 'classic_aphorism_shortcode'));
     
         //Add hook to function that registers widget 
         add_action('widgets_init', array($this, 'register_widget'));
@@ -58,11 +58,10 @@ class Wp_classic_aphorism_class {
         include_once(plugin_dir_path(__FILE__) . 'admin/wp-list-aphorisms.php');
     }
 
-
+    //Function gets random shortcode from database and returns it
     public function classic_aphorism_shortcode() {
 
         //Global database object for interacting with database
-
         global $wpdb;
 
         // Table name for SQL statement
